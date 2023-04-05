@@ -1,0 +1,158 @@
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Koodak;
+  src: url(./fonts/koodak.ttf);
+}
+@font-face {
+  font-family: consola;
+  src: url(./fonts/consola.ttf);
+}
+@font-face {
+  font-family: SourceCode;
+  src: url(./fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+  font-family: comic-sans;
+  src: url(./fonts/comic-sans.ttf);
+}
+@font-face {
+  font-family: comic-neue;
+  src: url(./fonts/ComicNeue-Regular.ttf);
+}
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/IRANSansXNoEn-Regular.ttf);
+}
+
+:root{
+  --color-1 : #F6F1F1;
+  --color-2 : #19A7CE;
+  --color-3 : #0081bd;
+  --color-4 : #000000;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+text-decoration: none;
+}
+
+body{
+  font-family: OpenSans,iransans,sans-serif;
+  background-color: var(--color-2);
+}
+
+#loader{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loader svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#loader svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+#loader svg polyline#front {
+  fill: none;
+  stroke: #ff4d4f;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+#content{
+  display: none;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.header_text_icon{
+  margin-right: auto;
+  margin-left:80px;
+  font-size: 25px;
+}
+
+.header_text_icon span{
+  font-size: 40px;
+  color: var(--color-4)
+}
+
+.SideMenuContainer{
+  position: fixed;
+  top:50%;
+  transform: translateY(-50%);
+  left: 30px;
+  height: 300px;
+  background-color: var(--color-3);
+  border-radius: 30px;
+  width: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.SideMenuContainer .menu_item{
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-3);
+  flex-direction: row-reverse;
+}
+
+.SideMenuContainer .menu_item:hover a{
+  display: block;
+}
+
+.SideMenuContainer .menu_item svg{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.SideMenuContainer .menu_item a{
+  display: none;
+}
