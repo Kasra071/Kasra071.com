@@ -20,7 +20,7 @@
   src: url(./fonts/comic-sans.ttf);
 }
 @font-face {
-  font-family: comic-neue;
+  font-family: comic-n;
   src: url(./fonts/ComicNeue-Regular.ttf);
 }
 @font-face {
@@ -51,6 +51,7 @@ text-decoration: none;
 body{
   font-family: OpenSans,iransans,sans-serif;
   background-color: var(--color-2);
+  position: relative;
 }
 
 #loader{
@@ -102,20 +103,58 @@ body{
   height: 80px;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 2;
 }
 
-.header_text_icon{
+.header .LanguageSelect{
+  margin-left: 100px;
   margin-right: auto;
-  margin-left:80px;
-  font-size: 25px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
 }
 
-.header_text_icon span{
-  font-size: 40px;
-  color: var(--color-4)
+.header .LanguageSelect img{
+  width: 40px;
+}
+
+.header .LanguageSelect span{
+  font-size: 15px;
+}
+
+.header .LanguageSelect svg{
+  width: 10px;
+}
+
+.header .LanguageSelect div{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 130px;
+  height: 60px;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  position: absolute;
+  top: 62px;
+  left: 10px;
+}
+
+.header .LanguageSelect .ShowingOption{
+  display: flex;
 }
 
 .SideMenuContainer{
@@ -141,10 +180,7 @@ body{
   justify-content: center;
   background-color: var(--color-3);
   flex-direction: row-reverse;
-}
-
-.SideMenuContainer .menu_item:hover a{
-  display: block;
+  position: relative;
 }
 
 .SideMenuContainer .menu_item svg{
@@ -155,4 +191,303 @@ body{
 
 .SideMenuContainer .menu_item a{
   display: none;
+  position: absolute;
+  top: 0px;
+  height: 35px;
+  left: 50px;
+  width: 100px;
+  background-color: var(--color-3);
+  box-shadow: 0 0 15px var(--color-3);
+  border-radius: 0px 10px 10px 0px;
+  color: black;
+  animation: sideAnim 0.2s forwards ease-in-out;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@keyframes sideAnim {
+  0%{width: 0px;}
+  100%{width: 100px;}
+}
+
+@keyframes sideAnimHide {
+  0%{width: 100px;}
+  100%{width: 0px;}
+}
+
+
+.overviewContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../dl/backgroundImage_Black.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+}
+
+.overviewContainer .PBM{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: rgb(199, 199, 199);
+  font-size: 11px;
+}
+
+.overviewImage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overviewImage img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.overviewName{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 35px;
+  font-family: SourceCode;
+}
+
+.overviewDesc{
+  font-family: consola;
+  font-size: 20px;
+  width: 600px;
+  margin: auto;
+  margin-top: 25px;
+  text-align: justify;
+}
+
+.AboutmeContainer{
+  padding: 50px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-family: SourceCode;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.AboutmeContainer h2{
+  text-align: center;
+  font-size: 30px;
+  font-family: OpenSans;
+}
+
+.AboutmeContainer p{
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+.AboutmeContainer p:first-child{
+  margin-top:0px;
+}
+
+.AboutmeContainer div{
+  margin-top: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.MySkillsContainer{
+  max-width: 800px;
+  font-family: SourceCode;
+  padding: 30px;
+  margin: auto;
+}
+
+.MySkillsContainer h2{
+  text-align: center;
+  font-size: 30px;
+  font-family: OpenSans;
+}
+
+.SkillsContainer{
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.Skill{
+  margin-top: 20px;
+}
+
+.Skill span{
+  font-size: 24px;
+  display: block;
+}
+
+.Skill-bar{
+  width: 100%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #eee;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.Skill-Bar-Filled{
+  position: relative;
+  border-radius: 20px;
+  height: 100%;
+  animation: ShowSkillBars 1.5s forwards ease-in-out 0.2s;
+  width: 0px;
+}
+
+@keyframes ShowSkillBars {
+  0%{width: 0px;}
+  100%{width: var(--width);}
+}
+
+.Skill-Bar-Filled-P{
+  position: absolute;
+  top: -35px;
+  height: 20px;
+  width: 30px;
+  right: 0px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px 5px 0px 5px;
+  animation: ShowP 0.5s forwards ease-in 1.8s;
+  opacity: 0;
+}
+
+@keyframes ShowP {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.PortfolioContainer h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.ProjectTypes{
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.Project{
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.ProjectIMG{
+  width: 100%;
+  border-radius: 10px;
+  border-bottom: 2px solid gray;
+  height: 400px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ProjectIMG img{
+  border-radius: 10px;
+  height: 100%;
+  display: block;
+  width: auto;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.ProjectDetails{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  position: relative;
+}
+
+.ProjectDetails  h3{
+  font-size: 25px;
+}
+
+.ProjectDetails p{
+  padding-right: 150px;
+  margin-top: 15px;
+}
+
+.ProjectDetails a{
+  color: white;
+  background-color: #161b22;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ProjectDetails a svg{
+  margin-left: 10px;
+  margin-right: auto;
+  height: 30px;
+  fill: white;
+}
+
+.ProjectDetails a span{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.ProjectBuiltWith{
+  display: flex;
+  margin-top:15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid gray;
+  justify-content: space-evenly;
+}
+
+.PBW{
+  display: block;
+  text-align: center;
+  width: 100px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+}
+
+.PBW-HTML{
+  border: 3px solid #dd4a24;
+  background-color: #dd4a24;
+  color: white;
+}
+
+.PBW-CSS{
+  border: 3px solid #254adb;
+  background-color: #254adb;
+  color: white;
+}
+
+.PBW-JS{
+  border: 3px solid #ecd74d;
+  background-color: #ecd74d;
 }
