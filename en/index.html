@@ -9,7 +9,7 @@
         <script src="http://127.0.0.2:5500/src/index.js" defer></script>
         <link rel="icon" href="http://127.0.0.2:5500/dl/toto.png">
         <meta charset="UTF-8">
-
+        <style id="HighlightMoverAnimation"></style>
 
     </head>
     <body>
@@ -37,6 +37,8 @@
     
     
             <main><div id="main">
+
+
                 <div id="overview">
                     <div class="overviewContainer" >
                         <span class="PBM">photo by me :)</span>
@@ -60,7 +62,8 @@
                     </div>
                 </div>
 
-
+                <div style="height:3px;background-color:black;width:100%;"></div>
+                
                 <div id="AboutMe">
                     <div class="AboutmeContainer"  data-aos="fade-right"  data-aos-duration="1500">
                         <h2>More About Me</h2>
@@ -119,19 +122,32 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="Skill">
+                                <span>Git/GitHub</span>
+                                <div class="Skill-bar">
+                                    <div class="Skill-Bar-Filled" style="--width:60%;background-color: #161b22 ;">
+                                        <div class="Skill-Bar-Filled-P">60%</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                
                 </div>
+
+
+                <div style="height:3px;background-color:black;width:100%"></div>
+
 
                 <div id="Portfolio">
                     <div class="PortfolioContainer">
                         <h2>My Portfolio</h2>
                         <div class="ProjectTypes ClientProjects">
                             <h2>Client Projects</h2>
-                            <div class="Project" data-aos="flip-left"  data-aos-duration="1500">
+                            <div class="Project">
 
                                 <div class="ProjectIMG">
-                                    <img src="../dl/projects/mana/1.png" alt="mana-georgia.com image" />
+                                    <a href="https://mana-georgia.com" target="_blank"><img src="../dl/projects/mana/1.png" alt="mana-georgia.com image" /></a>
                                 </div>
 
                                 <div class="ProjectDetails">
@@ -151,25 +167,27 @@
                         <div class="ProjectTypes PersonalProjects">
                             <h2>Personal Projects</h2>
 
-                            <div class="Project" data-aos="flip-left"  data-aos-duration="1500">
+                            <div class="Project">
 
                                 <div class="ProjectIMG">
-                                    <img src="../dl/projects/Kasra071.com/1.png" alt="kasra071.com image" />
+                                    <a href="https://Numbers_Conversion.kasra071.com" target="_blank"><img src="../dl/projects/n_c/1.png" alt="kasra071.com image" /></a>
                                 </div>
 
                                 <div class="ProjectDetails">
-                                    <h3>Kasra071.com</h3>
-                                    <p>Thats the website you are currently seeing :D i tought maybe i should put it here</p>
-                                    <a href="https://github.com/Kasra071/Kasra071.com" class="GitHubLink">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                                        <span>Github</span>
-                                    </a>
+                                    <h3>Numbers Conversion</h3>
+                                    <p>in this page you can convert numbers from any base to any base. all bases from base 2 to base 36 are supported. just choose the bases , and start converting ! </p>
                                 </div>
 
                                 <div class="ProjectBuiltWith">
                                     <div class="PBW PBW-HTML">HTML</div>
                                     <div class="PBW PBW-CSS">CSS</div>
                                     <div class="PBW PBW-JS">JS</div>
+                                    <div class="GitHubContainer">
+                                        <a href="https://github.com/Kasra071/Numbers_Conversion" class="GitHubLink">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                                            <span>Github</span>
+                                        </a>
+                                    </div>
                                 </div>
 
                             </div>
@@ -177,6 +195,51 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div style="height:3px;background-color:black;width:100%"></div>
+
+
+                <div id="Services">
+                    <div class="WholeServicesContainer">
+                        <h2>Services</h2>
+                        <div class="Tab_Navigation_Container">
+                            <div class="tab-highlighter"></div>
+                            <div id="Front-end-development" class="TabNavigation" onclick="ChangeTabServices(this)" tab-data="FED">Front-end development</div>
+                            <div class="TabNavigation" onclick="ChangeTabServices(this)" tab-data="SPD">Simple page development</div>
+                            <div class="TabNavigation" onclick="ChangeTabServices(this)" tab-data="WRD">Website redesign</div>
+                            <div class="TabNavigation" onclick="ChangeTabServices(this)" tab-data="RD">Responsive design</div>
+                        </div>
+                        <div class="ServiceShower" id="RD">
+                            <h3>Responsive design</h3>
+                            <p>In today's world, it's essential to have a website that looks great on any device. With my responsive design services, your website will look just as good on a mobile phone as it does on a desktop or tablet.</p>
+                            <a href="#ContactMe">Hire Me Now</a>
+                        </div>
+                        <div class="ServiceShower" id="WRD">
+                            <h3>Website redesign</h3>
+                            <p>Want to revamp your existing website and make it look modern and up-to-date? I can help you with website redesign services that will make your website stand out</p>
+                            <a href="#ContactMe">Hire Me Now</a>
+                        </div>
+                        <div class="ServiceShower" id="SPD">
+                            <h3>Simple page development</h3>
+                            <p>Need a simple webpage for a school project or a personal blog? I can create one for you at an affordable price. just contact me the details</p>
+                            <a href="#ContactMe">Hire Me Now</a>
+                        </div>
+                        <div class="ServiceShower" id="FED">
+                            <h3>Front-end development</h3>
+                            <p>Need a new website? I can help you create a visually appealing and user-friendly front-end for your website, whether it's a big project or a small one. just tell me what are the things you want, and i will give you the website as fast as possible :D</p>
+                            <a href="#ContactMe">Hire Me Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height:3px;background-color:black;width:100%"></div>
+
+                <div id="ContactMe">
+                    
+                </div>
+
+                <div style="height:500px"></div>
 
             </div></main>
     
