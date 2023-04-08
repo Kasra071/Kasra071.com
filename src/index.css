@@ -54,6 +54,7 @@ body{
   background-color: var(--color-2);
   position: relative;
 
+  
   background: url(../dl/bg.svg);
   background-size: cover;
   background-attachment: fixed;
@@ -177,6 +178,7 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+  z-index: 10;
 }
 
 .SideMenuContainer .menu_item{
@@ -424,19 +426,27 @@ body{
   border-radius: 20px;
 }
 
-.Project{
+
+.swiperProjectsClient , .swiperProjectsPersonal{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+
   box-shadow: 0 0 10px gray;
   border-radius: 10px;
+}
+
+.Project{
+
   max-width: 900px;
   margin: auto;
-  margin-top: 20px;
-  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .ProjectIMG{
   width: 100%;
   border-radius: 10px;
-  border-bottom: 2px solid gray;
   height: 300px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -461,6 +471,7 @@ body{
 
 .ProjectDetails  h3{
   font-size: 25px;
+  text-align: center;
   font-weight: normal;
 }
 

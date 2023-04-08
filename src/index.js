@@ -81,3 +81,53 @@ function ChangeTabServices(element){
     animCount++;
 
 }
+
+var projectsSwiper = new Swiper('.swiperProjectsClient',{
+    direction: 'horizontal',
+    loop: true,
+    speed:350,
+
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction:false,
+    },
+    freeMode: {
+        enabled: true,
+        sticky: true,
+      },
+  
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+      },
+})
+
+var projectsSwiperPersonal = new Swiper('.swiperProjectsPersonal',{
+    direction: 'horizontal',
+    loop: true,
+    speed:350,
+
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction:false,
+    },
+    freeMode: {
+        enabled: true,
+        sticky: true,
+      },
+  
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+      },
+})
