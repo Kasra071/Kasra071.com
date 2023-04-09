@@ -1,0 +1,86 @@
+@font-face {
+    font-family: iransans;
+    src: url(./fonts/IRANSansXNoEn-Regular.ttf);
+  }
+  @font-face {
+    font-family: Koodak;
+    src: url(./fonts/koodak.ttf);
+  }
+  @font-face {
+    font-family: SourceCode;
+    src: url(./fonts/SourceSansPro-Regular.ttf);
+  }
+  @font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-Regular.ttf);
+  }
+
+
+  body{
+    font-family: iransans,sans-serif;
+  }
+
+.overviewDesc{
+    direction: rtl;
+    font-family: iransans;
+}
+
+.overviewName{
+    font-family: koodak;
+}
+
+.SideMenuContainer{
+    right: 30px;
+    left: auto;
+}
+
+.SideMenuContainer .menu_item a{
+    left: auto;
+    right: 50px;
+    border-radius: 10px 0px 0px 10px;
+    justify-content: flex-end;
+}
+
+.AboutmeContainer h2{
+    font-family: koodak;
+    direction: rtl;
+}
+
+.AboutmeContainer div{
+    direction: rtl;
+    font-family: iransans,SourceCode;
+}
+
+.MySkillsContainer h2{
+    font-family: iransans;
+}
+
+.ProjectDetails p{
+    direction: rtl;
+}
+
+.ProjectBuiltWith{
+    font-family: OpenSans,sans-serif;
+}
+.Tab_Navigation_Container{
+    flex-direction: row-reverse;
+}
+.tab-highlighter{
+    right: 0px;
+    left: auto;
+}
+
+.ProjectDetails h3{
+    font-family: iransans,OpenSans;
+}
+.FooterContainer{
+    flex-direction: row-reverse;
+}
+
+.CM-HEADER p{
+    direction: rtl;
+}
+
+.ServiceShower p{
+    direction: rtl;
+}
