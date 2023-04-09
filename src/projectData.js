@@ -11,6 +11,19 @@ var clientProjects = [
 
         NameFa : 'mana-georgia.com',
         descFa : 'این وبسایت برای یک موسسه ازدواج واقع در گرجستان ساخته شده. برای دیدن کامل صفحات و اطلاعات بیشتر میتونین به سایتشون سر بزنین',
+    },    
+    {
+        Name : 'USA interactive map',
+        img : 'dl/projects/USA_MAP/1.png',
+        desc : "this simple page was built for a client's school project. its a interactive usa map where you can make lists of states and when you click on each list id on the side buttons, they will be highlighted on the map.",
+        builtWith : [
+            'HTML','CSS','JS'
+        ],
+        github : 'https://github.com/Kasra071/USA-interactive-map',
+        url : 'https://USA_interactive_map.Kasra071.com',
+
+        NameFa : 'نقشه آمریکای تعاملی',
+        descFa : 'این صفحه وب ساده برای پروژه مدرسه ای یک مشتری ساخته شده. یک مپ آمریکاست که میتونین توش یه لیست از ایالتا درست کنید و هروقت روی آیدی اون لیست کلیک کنید، ایالت های داخل اون لیست، روی مپ رنگ میشن و میتونین ببینیدشون'
     }
 ]
 
