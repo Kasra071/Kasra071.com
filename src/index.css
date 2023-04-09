@@ -59,6 +59,8 @@ body{
   background: url(../dl/bg.svg);
   background-size: cover;
   background-attachment: fixed;
+
+  overflow-x: hidden;
 }
 
 #loader{
@@ -234,6 +236,7 @@ body{
   background: url(../dl/backgroundImage_Black.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   position: relative;
   color: white;
 }
@@ -526,6 +529,7 @@ body{
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 10px;
+  margin-top: 5px;
 }
 
 .PBW-HTML{
@@ -754,4 +758,255 @@ body{
   height: 20px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.MobileSideNav{
+  display: none;
+  position: fixed;
+  top:10px;
+  right: 20px;
+  height: 50px;
+  background-color: var(--color-5);
+  border-radius: 30px;
+  width: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.MobileSideNav svg{
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+
+.showingSideMenu{
+  display: flex !important;
+}
+
+@keyframes MobileSideMenuAnim {
+  0%{height: 0px;overflow: hidden;padding: 0px;}
+  50%{height: 300px;}
+  100%{overflow: auto;padding-top: 10px;padding-bottom: 10px;}
+}
+
+@media only screen and (max-width : 1414px){
+  .ProjectTypes{
+    max-width: 900px;
+  }
+  .ProjectDetails p{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .WholeServicesContainer{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width : 1250px){
+  .AboutmeContainer{
+    padding: 100px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+  .TabNavigation{
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width : 1100px){
+  .ProjectTypes{
+    max-width: 800px;
+  }
+}
+
+
+@media only screen and (max-width:1000px){
+  .header .LanguageSelect{
+    margin-left: 50px;
+  }
+  .ProjectTypes{
+    max-width: 600px;
+  }
+  .ProjectIMG img{
+    height: auto;
+    width: 500px;
+  }
+
+  .Tab_Navigation_Container{
+    flex-wrap: wrap;
+    height: 100px;
+  }
+  .TabNavigation{
+    flex-basis: calc(50% - 2px);
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 0px;
+  }
+  .tab-highlighter{
+    width: 50%;
+  }
+  .ServiceShower{
+    border: none;
+  }
+}
+
+@media only screen and (max-width:800px){
+
+  .SideMenuContainer .menu_item a{
+    display: none !important;
+  }
+  .MobileSideNav{
+    display: flex;
+    z-index: 20;
+  }
+  .SideMenuContainer{
+    display: none;
+
+    position: fixed;
+    top:60px;
+    right: 30px;
+    height: 300px;
+    left: auto;
+    transform: none;
+    background-color: var(--color-5);
+    border-radius: 30px;
+    width: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    z-index: 10;
+
+    animation: MobileSideMenuAnim 1s forwards;
+  }
+
+  .header .LanguageSelect{
+    margin-left: 20px;
+  }
+  .AboutmeContainer p{
+    font-size: 16px;
+  }
+  .AboutmeContainer h2 , .MySkillsContainer h2 , .PortfolioContainer h2 , .WholeServicesContainer h2 , .CM-HEADER h2{
+    font-size: 24px;
+  }
+
+  .AboutmeContainer{
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  .SkillsContainer{
+    width: auto;
+    max-width: 100%;
+  }
+
+  .ProjectTypes{
+    max-width: 100%;
+    width: auto;
+  }
+  .ProjectIMG img{
+    height: auto;
+    width: 100%;
+  }
+  .Project{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .ProjectIMG{
+    height: fit-content;
+    width: auto;
+  }
+  .ProjectDetails{
+    font-size: 16px;
+  }
+
+  .WholeServicesContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    width: auto;
+  }
+}
+@media only screen and (max-width:670px){
+  .overviewDesc{
+    width: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .ServiceShower p{
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ServiceShower a{
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width:460px){
+  .ProjectDetails{
+    padding: 0px;
+  }
+  .Skill-bar{
+    position: relative;
+  }
+  .Skill-Bar-Filled{
+    position: static;
+  }
+  .Skill-Bar-Filled-P{
+    position: absolute;
+    top: -35px;
+    height: fit-content;
+    width: 30px;
+    right: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    animation: ShowP 0.5s forwards ease-in 1.8s;
+    opacity: 0;
+  }
+
+  .Project{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .TabNavigation{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:420px){
+  .ProjectDetails p{
+    font-size: 14px;
+  }
+  .PBW{
+    width: 70px;
+  }
+  .Project{
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .WholeServicesContainer{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .TabNavigation{
+    font-size: 13px;
+  }
 }

@@ -139,51 +139,104 @@ function ChangeLang(lang){
 
 ChangeTabServices(document.getElementById('Front-end-development'))
 var currentLeftOffset = 0;
+var currentTopOffset = 0;
 var animCount = 0;
 function ChangeTabServices(element){
     let highlighter = document.querySelector('.tab-highlighter')
     let StyleTag = document.getElementById('HighlightMoverAnimation')
     let tab = element.getAttribute('tab-data')
     let LeftCount;
-    switch(tab){
-        case 'FED':
-            LeftCount = 0
-            break;
-        case 'SPD':
-            LeftCount = 25
-            break;
-        case 'WRD':
-            LeftCount = 50
-            break;
-        case 'RD':
-            LeftCount = 75
-            break;
+    let topCount;
+    if(window.innerWidth < 1000)
+    {
+        switch(tab){
+            case 'FED':
+                LeftCount = 0
+                topCount = 0;
+                break;
+            case 'SPD':
+                LeftCount = 50
+                topCount = 0;
+                break;
+            case 'WRD':
+                LeftCount = 0
+                topCount = 50;
+                break;
+            case 'RD':
+                LeftCount = 50
+                topCount = 50;
+                break;
+        }
+    
+        if(PageLang == 'en'){
+            StyleTag.innerHTML = `
+                @keyframes Movehighlighter-${animCount} {
+                    0%{left: ${currentLeftOffset}%;top:${currentTopOffset}%}
+                    100%{left: ${LeftCount}%;top:${topCount}%}
+                }
+            `
+        }else{
+            StyleTag.innerHTML = `
+                @keyframes Movehighlighter-${animCount} {
+                    0%{right: ${currentLeftOffset}%;top:${currentTopOffset}%}
+                    100%{right: ${LeftCount}%;top:${topCount}%}
+                }
+            `
+        }
+    
+        currentLeftOffset = LeftCount
+        currentTopOffset = topCount
+        highlighter.style.animation = "none";
+        highlighter.style.animation = `Movehighlighter-${animCount} 0.2s ease-in-out forwards`
+        document.querySelectorAll('.ServiceShower').forEach(elem =>{
+            elem.style.display = 'none'
+        })
+        document.getElementById(tab).style.display = 'block'
+        animCount++;
     }
-
-    if(PageLang == 'en'){
-        StyleTag.innerHTML = `
-            @keyframes Movehighlighter-${animCount} {
-                0%{left: ${currentLeftOffset}%;}
-                100%{left: ${LeftCount}%;}
-            }
-        `
-    }else{
-        StyleTag.innerHTML = `
-            @keyframes Movehighlighter-${animCount} {
-                0%{right: ${currentLeftOffset}%;}
-                100%{right: ${LeftCount}%;}
-            }
-        `
+    else
+    {
+        switch(tab){
+            case 'FED':
+                LeftCount = 0
+                break;
+            case 'SPD':
+                LeftCount = 25
+                break;
+            case 'WRD':
+                LeftCount = 50
+                break;
+            case 'RD':
+                LeftCount = 75
+                break;
+        }
+    
+        if(PageLang == 'en'){
+            StyleTag.innerHTML = `
+                @keyframes Movehighlighter-${animCount} {
+                    0%{left: ${currentLeftOffset}%;}
+                    100%{left: ${LeftCount}%;}
+                }
+            `
+        }else{
+            StyleTag.innerHTML = `
+                @keyframes Movehighlighter-${animCount} {
+                    0%{right: ${currentLeftOffset}%;}
+                    100%{right: ${LeftCount}%;}
+                }
+            `
+        }
+    
+        currentLeftOffset = LeftCount
+        highlighter.style.animation = "none";
+        highlighter.style.animation = `Movehighlighter-${animCount} 0.2s ease-in-out forwards`
+        document.querySelectorAll('.ServiceShower').forEach(elem =>{
+            elem.style.display = 'none'
+        })
+        document.getElementById(tab).style.display = 'block'
+        animCount++;
     }
-
-    currentLeftOffset = LeftCount
-    highlighter.style.animation = "none";
-    highlighter.style.animation = `Movehighlighter-${animCount} 0.2s ease-in-out forwards`
-    document.querySelectorAll('.ServiceShower').forEach(elem =>{
-        elem.style.display = 'none'
-    })
-    document.getElementById(tab).style.display = 'block'
-    animCount++;
+    
 
 }
 
@@ -236,3 +289,7 @@ var projectsSwiperPersonal = new Swiper('.swiperProjectsPersonal',{
         clickable:true,
       },
 })
+
+function OpenSideMenuMobile(){
+    document.querySelector('.SideMenuContainer').classList.toggle('showingSideMenu')
+}
