@@ -817,11 +817,23 @@ body{
   .TabNavigation{
     font-size: 16px;
   }
+  .WholeContactContainer{
+    padding: 100px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width : 1100px){
   .ProjectTypes{
     max-width: 800px;
+  }
+  .CM-HEADER p{
+    font-size: 20px;
+  }
+  .SocialContainer{
+    width: auto;
+    max-width: 100%;
   }
 }
 
@@ -935,6 +947,21 @@ body{
     max-width: 100%;
     width: auto;
   }
+
+  .WholeContactContainer{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .SocialContainer{
+    height: 70px;
+  }
+  .SocialContainer span{
+    font-size: 20px;
+  }
+  .SocialContainer svg{
+    height: 35px;
+    width: 35px;
+  }
 }
 @media only screen and (max-width:670px){
   .overviewDesc{
@@ -987,6 +1014,18 @@ body{
 
   .TabNavigation{
     font-size: 14px;
+  }
+
+  .CM-HEADER p{
+    font-size: 16px;
+  }
+  .SocialContainer span{
+    font-size: 16px;
+  }
+  .SocialContainer svg{
+    height: 30px;
+    width: 30px;
+    right: 10px;
   }
 }
 
