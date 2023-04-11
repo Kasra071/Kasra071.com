@@ -290,6 +290,18 @@ var projectsSwiperPersonal = new Swiper('.swiperProjectsPersonal',{
       },
 })
 
+var menuOpen = false;
 function OpenSideMenuMobile(){
-    document.querySelector('.SideMenuContainer').classList.toggle('showingSideMenu')
+    var menuElement = document.querySelector('.SideMenuContainer');
+    if(menuOpen){
+        menuElement.style.animation = "MobileSideMenuAnimHide 1s forwards"
+        setTimeout(()=>{
+            menuElement.style.display = "none"
+        },1000)
+        menuOpen = false;
+    }else{
+        menuOpen = true;
+        menuElement.style.display = "flex"
+        menuElement.style.animation = "MobileSideMenuAnim 1s forwards"
+    }
 }

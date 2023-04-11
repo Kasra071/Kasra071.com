@@ -783,14 +783,16 @@ body{
   width: 35px;
 }
 
-.showingSideMenu{
-  display: flex !important;
-}
-
 @keyframes MobileSideMenuAnim {
   0%{height: 0px;overflow: hidden;padding: 0px;}
   50%{height: 300px;}
   100%{overflow: auto;padding-top: 10px;padding-bottom: 10px;}
+}
+
+@keyframes MobileSideMenuAnimHide {
+  0%{height: 300px;overflow: auto;padding-top: 10px;padding-bottom: 10px;}
+  50%{height: 0px;}
+  100%{overflow: hidden;padding: 0px;height: 0px;}
 }
 
 @media only screen and (max-width : 1414px){
@@ -896,8 +898,6 @@ body{
     padding-bottom: 10px;
     align-items: center;
     z-index: 10;
-
-    animation: MobileSideMenuAnim 1s forwards;
   }
 
   .header .LanguageSelect{
